@@ -1,0 +1,66 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": [
+                "./apps/web/src/*"
+            ],
+            "@modules/*": [
+                "./apps/web/src/modules/*"
+            ],
+            "@shared/*": [
+                "./apps/web/src/shared/*"
+            ],
+            "@/components/*": [
+                "./apps/web/src/components/*"
+            ],
+            "@/lib/*": [
+                "./apps/web/src/lib/*"
+            ],
+            "@/types/*": [
+                "./apps/web/src/shared/types/*"
+            ],
+            "@/hooks/*": [
+                "./apps/web/src/shared/hooks/*"
+            ]
+        }
+    },
+    "include": [
+        "apps/web/next-env.d.ts",
+        "apps/web/**/*.ts",
+        "apps/web/**/*.tsx",
+        "tests/**/*.ts",
+        "tests/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        ".next",
+        "prisma",
+        "scripts",
+        "tools",
+        "vite.config.ts",
+        "talentlms-dashboard-clone"
+    ]
+}

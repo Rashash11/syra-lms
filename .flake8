@@ -1,0 +1,4 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203,E501
+exclude = .git,__pycache__,docs,build,dist,.venv,venv,node_modules,scripts,smoke_test.py,check_*.py,debug_*.py,fix_*.py,get_*.py,verify_*.py,test_enum.py,unify_tenants.py,alembic

@@ -1,0 +1,205 @@
+# API Coverage Report
+
+## Frontend API Calls Detected (Heuristic)
+- `/api/admin/notifications`
+- `/api/admin/permissions`
+- `/api/admin/roles`
+- `/api/admin/security/sessions`
+- `/api/admin/user-types`
+- `/api/assignments`
+- `/api/auth/forgot-password`
+- `/api/auth/login`
+- `/api/auth/logout`
+- `/api/auth/logout-all`
+- `/api/auth/me`
+- `/api/auth/permissions`
+- `/api/auth/refresh`
+- `/api/auth/signup`
+- `/api/automations`
+- `/api/branches`
+- `/api/calendar-events`
+- `/api/catalog`
+- `/api/conferences`
+- `/api/courses`
+- `/api/dashboard`
+- `/api/groups`
+- `/api/instructor/calendar/events`
+- `/api/instructor/conferences`
+- `/api/instructor/groups`
+- `/api/instructor/job-roles`
+- `/api/instructor/recommendations`
+- `/api/learner/assignments`
+- `/api/learner/enrollments`
+- `/api/learning-paths`
+- `/api/me`
+- `/api/me/switch-role`
+- `/api/organization-nodes`
+- `/api/placeholder/400/200`
+- `/api/reports`
+- `/api/reports/export/training-matrix`
+- `/api/reports/export/training-progress`
+- `/api/skills`
+- `/api/submissions`
+- `/api/super-instructor/dashboard`
+- `/api/upload`
+- `/api/users`
+
+## Backend Routes Detected (Heuristic)
+- `DELETE /api/admin/notifications/{notification_id}`
+- `DELETE /api/admin/security/sessions`
+- `DELETE /api/assignments/{assignment_id}`
+- `DELETE /api/automations`
+- `DELETE /api/branches`
+- `DELETE /api/categories`
+- `DELETE /api/courses`
+- `DELETE /api/courses_editor/{course_id}/enrollments`
+- `DELETE /api/courses_editor/{course_id}/sections/{section_id}`
+- `DELETE /api/courses_editor/{course_id}/units/{unit_id}`
+- `DELETE /api/enrollments/{enrollment_id}`
+- `DELETE /api/files/{file_id}`
+- `DELETE /api/groups`
+- `DELETE /api/learning-paths/{path_id}`
+- `DELETE /api/learning-paths/{path_id}/courses/{course_id}`
+- `DELETE /api/learning-paths/{path_id}/enrollments`
+- `DELETE /api/learning-paths/{path_id}/sections/{section_id}`
+- `DELETE /api/notifications/{notification_id}`
+- `DELETE /api/users`
+- `DELETE /api/users/{user_id}`
+- `GET /api/admin/notifications`
+- `GET /api/admin/notifications/events`
+- `GET /api/admin/notifications/{notification_id}`
+- `GET /api/admin/permissions`
+- `GET /api/admin/roles`
+- `GET /api/admin/security/audit`
+- `GET /api/admin/security/sessions`
+- `GET /api/admin/settings`
+- `GET /api/admin/user-types`
+- `GET /api/admin/users/export`
+- `GET /api/admin/users/preview-permissions`
+- `GET /api/admin_options/learning-paths/{path_id}/options`
+- `GET /api/assignments`
+- `GET /api/assignments/{assignment_id}`
+- `GET /api/auth/me`
+- `GET /api/auth/permissions`
+- `GET /api/automations`
+- `GET /api/branches`
+- `GET /api/branches/{branch_id}`
+- `GET /api/calendar_events`
+- `GET /api/catalog`
+- `GET /api/categories`
+- `GET /api/categories/{category_id}`
+- `GET /api/conferences`
+- `GET /api/courses`
+- `GET /api/courses/catalog`
+- `GET /api/courses/{course_id}`
+- `GET /api/courses_editor/test`
+- `GET /api/courses_editor/{course_id}/enrollment-requests`
+- `GET /api/courses_editor/{course_id}/enrollments`
+- `GET /api/courses_editor/{course_id}/files`
+- `GET /api/courses_editor/{course_id}/sections`
+- `GET /api/courses_editor/{course_id}/units`
+- `GET /api/courses_editor/{course_id}/units/{unit_id}`
+- `GET /api/dashboard`
+- `GET /api/enrollments`
+- `GET /api/files/{file_id}`
+- `GET /api/groups`
+- `GET /api/groups/{group_id}`
+- `GET /api/instructor/conferences`
+- `GET /api/instructor/courses`
+- `GET /api/instructor/groups`
+- `GET /api/learner/assignments`
+- `GET /api/learner/enrollments`
+- `GET /api/learner/progress`
+- `GET /api/learning-paths`
+- `GET /api/learning-paths/{path_id}`
+- `GET /api/learning-paths/{path_id}/courses`
+- `GET /api/learning-paths/{path_id}/enrollments`
+- `GET /api/learning-paths/{path_id}/sections`
+- `GET /api/me/me`
+- `GET /api/notifications`
+- `GET /api/notifications/{notification_id}`
+- `GET /api/reports/course-progress`
+- `GET /api/reports/dashboard`
+- `GET /api/reports/overview`
+- `GET /api/reports/training-matrix`
+- `GET /api/reports/user-activity`
+- `GET /api/skills`
+- `GET /api/submissions`
+- `GET /api/submissions/{submission_id}`
+- `GET /api/users`
+- `GET /api/users/search`
+- `GET /api/users/{user_id}`
+- `PATCH /api/admin/notifications/{notification_id}/toggle`
+- `PATCH /api/automations`
+- `PATCH /api/branches/{branch_id}`
+- `PATCH /api/courses`
+- `PATCH /api/courses_editor/{course_id}/reorder`
+- `PATCH /api/learning-paths/{path_id}`
+- `PATCH /api/learning-paths/{path_id}/courses/reorder`
+- `PATCH /api/learning-paths/{path_id}/sections/{section_id}`
+- `PATCH /api/submissions/{submission_id}`
+- `PATCH /api/users`
+- `POST /api/admin/notifications`
+- `POST /api/admin/notifications/pending/{queue_id}/cancel`
+- `POST /api/admin/notifications/{notification_id}/duplicate`
+- `POST /api/admin/notifications/{notification_id}/preview`
+- `POST /api/admin/settings`
+- `POST /api/admin/users/import`
+- `POST /api/admin/users/{user_id}/impersonate`
+- `POST /api/assignments`
+- `POST /api/auth/forgot-password`
+- `POST /api/auth/login`
+- `POST /api/auth/logout`
+- `POST /api/auth/logout-all`
+- `POST /api/auth/refresh`
+- `POST /api/auth/reset-password`
+- `POST /api/auth/signup`
+- `POST /api/auth/switch-node`
+- `POST /api/automations`
+- `POST /api/branches`
+- `POST /api/branches_upload/{branch_id}/upload`
+- `POST /api/categories`
+- `POST /api/conferences`
+- `POST /api/courses`
+- `POST /api/courses_editor/{course_id}/enrollments`
+- `POST /api/courses_editor/{course_id}/image`
+- `POST /api/courses_editor/{course_id}/import-unit`
+- `POST /api/courses_editor/{course_id}/sections`
+- `POST /api/courses_editor/{course_id}/units`
+- `POST /api/enrollments`
+- `POST /api/groups`
+- `POST /api/groups/{group_id}/courses`
+- `POST /api/groups/{group_id}/members`
+- `POST /api/instructor/calendar/events`
+- `POST /api/instructor/conferences`
+- `POST /api/instructor/groups`
+- `POST /api/learner/courses/{course_id}/last-unit`
+- `POST /api/learning-paths`
+- `POST /api/learning-paths/{path_id}/courses`
+- `POST /api/learning-paths/{path_id}/enrollments`
+- `POST /api/learning-paths/{path_id}/sections`
+- `POST /api/me/me/switch-role`
+- `POST /api/notifications/mark-all-read`
+- `POST /api/notifications/mark-read`
+- `POST /api/reports/export/training-matrix`
+- `POST /api/reports/export/training-progress`
+- `POST /api/reports/generate`
+- `POST /api/skills`
+- `POST /api/submissions`
+- `POST /api/uploads`
+- `POST /api/users`
+- `PUT /api/admin/notifications/{notification_id}`
+- `PUT /api/admin_options/learning-paths/{path_id}/options`
+- `PUT /api/assignments/{assignment_id}`
+- `PUT /api/branches/{branch_id}`
+- `PUT /api/categories/{category_id}`
+- `PUT /api/courses/{course_id}`
+- `PUT /api/courses_editor/{course_id}/sections/{section_id}`
+- `PUT /api/courses_editor/{course_id}/units/{unit_id}`
+- `PUT /api/groups/{group_id}`
+- `PUT /api/learning-paths/{path_id}`
+- `PUT /api/users/{user_id}`
+
+## Potential Gaps (Frontend calls not clearly matched)
+> Note: dynamic paths like `/api/users/${id}` won't match exactly against `/api/users/{user_id}` in this simple check.
+

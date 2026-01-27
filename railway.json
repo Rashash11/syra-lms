@@ -1,0 +1,38 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "services": {
+        "db": {
+            "source": {
+                "image": "postgres:15-alpine"
+            },
+            "env": {
+                "POSTGRES_DB": "lms_db",
+                "POSTGRES_USER": "lms_user",
+                "POSTGRES_PASSWORD": "${{PASSWORD}}"
+            }
+        },
+        "backend": {
+            "source": {
+                "directory": "services/api"
+            },
+            "env": {
+                "DATABASE_URL": "postgresql+asyncpg://${{db.POSTGRES_USER}}:${{db.POSTGRES_PASSWORD}}@${{db.RAILWAY_PRIVATE_DOMAIN}}:5432/${{db.POSTGRES_DB}}",
+                "PORT": "8000",
+                "JWT_SECRET": "${{JWT_SECRET}}",
+                "ENV": "production"
+            }
+        },
+        "frontend": {
+            "source": {
+                "directory": ".",
+                "dockerfile": "infra/Dockerfile"
+            },
+            "env": {
+                "DATABASE_URL": "postgresql://${{db.POSTGRES_USER}}:${{db.POSTGRES_PASSWORD}}@${{db.RAILWAY_PRIVATE_DOMAIN}}:5432/${{db.POSTGRES_DB}}",
+                "PYTHON_BACKEND_URL": "http://${{backend.RAILWAY_PRIVATE_DOMAIN}}:8000",
+                "NEXT_PUBLIC_BASE_URL": "https://${{RAILWAY_STATIC_URL}}",
+                "JWT_SECRET": "${{JWT_SECRET}}"
+            }
+        }
+    }
+}

@@ -1,0 +1,1720 @@
+{
+  "generatedAt": "2026-01-25T11:01:48.118Z",
+  "backend": "http://127.0.0.1:8001",
+  "counts": {
+    "callsites": 230,
+    "uniqueCalls": 108,
+    "matchedCalls": 87,
+    "unmatchedCalls": 21,
+    "backendRoutes": 166,
+    "unusedBackendRoutes": 76
+  },
+  "unmatched": [
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/learning-paths/page.tsx",
+      "line": 53,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/learning-paths?${params}",
+      "normalizedPath": "/api/instructor/learning-paths"
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/reports/page.tsx",
+      "line": 29,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/reports",
+      "normalizedPath": "/api/reports"
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/skills/page.tsx",
+      "line": 101,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/job-roles",
+      "normalizedPath": "/api/instructor/job-roles"
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/skills/page.tsx",
+      "line": 85,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/skills?${params.toString()}",
+      "normalizedPath": "/api/instructor/skills"
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/skills/page.tsx",
+      "line": 124,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/recommendations/candidates?skillId=${skillId}",
+      "normalizedPath": "/api/instructor/recommendations/candidates"
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/skills/[id]/page.tsx",
+      "line": 43,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/skills/${skillId}",
+      "normalizedPath": "/api/instructor/skills/{param1}"
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/assignments/[id]/page.tsx",
+      "line": 184,
+      "callee": "apiFetch",
+      "method": "PUT",
+      "rawPath": "/api/submissions",
+      "normalizedPath": "/api/submissions"
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/catalog/page.tsx",
+      "line": 94,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/enroll",
+      "normalizedPath": "/api/courses/{param1}/enroll"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 444,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/courses/${courseId}",
+      "normalizedPath": "/api/courses/{param1}"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 531,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/courses/${courseId}/units/${unitId}",
+      "normalizedPath": "/api/courses/{param1}/units/{param2}"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 638,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/files",
+      "normalizedPath": "/api/courses/{param1}/files"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 702,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/generate-image",
+      "normalizedPath": "/api/courses/{param1}/generate-image"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/grading-hub/[id]/page.tsx",
+      "line": 90,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/submissions",
+      "normalizedPath": "/api/submissions"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page-new.tsx",
+      "line": 187,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/learning-paths/${id}/courses?courseId=${courseId}",
+      "normalizedPath": "/api/learning-paths/{param1}/courses"
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/page.tsx",
+      "line": 110,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/super-instructor/dashboard",
+      "normalizedPath": "/api/super-instructor/dashboard"
+    },
+    {
+      "file": "apps/web/src/app/admin/learning-paths/[id]/edit/components/LearningPathOptionsPanel.tsx",
+      "line": 114,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/admin/learning-paths/${pathId}/options",
+      "normalizedPath": "/api/admin/learning-paths/{param1}/options"
+    },
+    {
+      "file": "apps/web/src/app/admin/users/new/page.tsx",
+      "line": 117,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/organization-nodes",
+      "normalizedPath": "/api/organization-nodes"
+    },
+    {
+      "file": "apps/web/src/app/enroll/[key]/EnrollmentForm.tsx",
+      "line": 24,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/enroll/${enrollmentKey}",
+      "normalizedPath": "/api/courses/enroll/{param1}"
+    },
+    {
+      "file": "apps/web/src/modules/courses/editor/CourseEnrollmentDrawer.tsx",
+      "line": 282,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/enrollment-requests/${requestId}",
+      "normalizedPath": "/api/courses/{param1}/enrollment-requests/{param2}"
+    },
+    {
+      "file": "apps/web/src/modules/courses/editor/CourseEnrollmentDrawer.tsx",
+      "line": 298,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/courses/${courseId}/enrollment-requests/${requestId}",
+      "normalizedPath": "/api/courses/{param1}/enrollment-requests/{param2}"
+    },
+    {
+      "file": "apps/web/src/modules/reports/ui/TimelineTab.tsx",
+      "line": 54,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/reports/timeline?${params}",
+      "normalizedPath": "/api/reports/timeline"
+    }
+  ],
+  "matched": [
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/assignments/page.tsx",
+      "line": 72,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/assignments",
+      "normalizedPath": "/api/assignments",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/assignments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/assignments/page.tsx",
+      "line": 73,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/courses",
+      "normalizedPath": "/api/courses",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/calendar/page.tsx",
+      "line": 62,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/calendar-events?start=${start.toISOString()}&end=${end.toISOString()}",
+      "normalizedPath": "/api/calendar-events",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/calendar-events"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/conferences/page.tsx",
+      "line": 70,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/conferences?${params.toString()}",
+      "normalizedPath": "/api/instructor/conferences",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/instructor/conferences"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/courses/page.tsx",
+      "line": 72,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/courses?${params}",
+      "normalizedPath": "/api/instructor/courses",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/instructor/courses"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/courses/page.tsx",
+      "line": 140,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/courses/${menuCourse.id}",
+      "normalizedPath": "/api/courses/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/courses/{course_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/courses/[id]/page.tsx",
+      "line": 20,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/courses/${courseId}",
+      "normalizedPath": "/api/courses/{param1}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses/test"
+        },
+        {
+          "method": "GET",
+          "path": "/api/courses/catalog"
+        },
+        {
+          "method": "GET",
+          "path": "/api/courses/{course_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/grading-hub/page.tsx",
+      "line": 44,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/grading-hub?tab=${tabType}",
+      "normalizedPath": "/api/instructor/grading-hub",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/instructor/grading-hub"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/groups/page.tsx",
+      "line": 55,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/instructor/groups?${params.toString()}",
+      "normalizedPath": "/api/instructor/groups",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/instructor/groups"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/instructor/page.tsx",
+      "line": 54,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/me",
+      "normalizedPath": "/api/me",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/me"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(instructor)/layout.tsx",
+      "line": 118,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/auth/logout",
+      "normalizedPath": "/api/auth/logout",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/auth/logout"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/assignments/page.tsx",
+      "line": 60,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/submissions",
+      "normalizedPath": "/api/submissions",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/submissions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/assignments/[id]/page.tsx",
+      "line": 67,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/assignments/${assignmentId}",
+      "normalizedPath": "/api/assignments/{param1}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/assignments/{assignment_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/assignments/[id]/page.tsx",
+      "line": 165,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/assignments/${assignmentId}/submissions",
+      "normalizedPath": "/api/assignments/{param1}/submissions",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/assignments/{assignment_id}/submissions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/catalog/page.tsx",
+      "line": 58,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/catalog",
+      "normalizedPath": "/api/catalog",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/catalog"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/courses/page.tsx",
+      "line": 45,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learner/enrollments",
+      "normalizedPath": "/api/learner/enrollments",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learner/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/courses/[id]/page.tsx",
+      "line": 21,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learner/progress?courseId=${courseId}",
+      "normalizedPath": "/api/learner/progress",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learner/progress"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/courses/[id]/units/[unitId]/page.tsx",
+      "line": 69,
+      "callee": "apiFetch",
+      "method": "GET",
+      "rawPath": "/api/courses/${courseId}/units/${unitId}",
+      "normalizedPath": "/api/courses/{param1}/units/{param2}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses/{course_id}/units/{unit_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/courses/[id]/units/[unitId]/page.tsx",
+      "line": 90,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/learner/courses/${courseId}/last-unit",
+      "normalizedPath": "/api/learner/courses/{param1}/last-unit",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/learner/courses/{course_id}/last-unit"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(learner)/learner/page.tsx",
+      "line": 47,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learner/assignments",
+      "normalizedPath": "/api/learner/assignments",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learner/assignments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/assignments/page.tsx",
+      "line": 109,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/assignments/${selectedAssignment.id}",
+      "normalizedPath": "/api/assignments/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/assignments/{assignment_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/conferences/new/page.tsx",
+      "line": 30,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/conferences",
+      "normalizedPath": "/api/conferences",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/conferences"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/conferences/page.tsx",
+      "line": 35,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/conferences",
+      "normalizedPath": "/api/conferences",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/conferences"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 129,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses",
+      "normalizedPath": "/api/courses",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 189,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/courses/${courseId}/files",
+      "normalizedPath": "/api/courses/{param1}/files",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses/{course_id}/files"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 219,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/courses/${courseId}/reorder",
+      "normalizedPath": "/api/courses/{param1}/reorder",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/courses/{course_id}/reorder"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 243,
+      "callee": "fetch",
+      "method": "PUT",
+      "rawPath": "/api/courses/${courseId}",
+      "normalizedPath": "/api/courses/{param1}",
+      "matches": [
+        {
+          "method": "PUT",
+          "path": "/api/courses/{course_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 274,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/units",
+      "normalizedPath": "/api/courses/{param1}/units",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses/{course_id}/units"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 309,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/sections",
+      "normalizedPath": "/api/courses/{param1}/sections",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses/{course_id}/sections"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 346,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/import-unit",
+      "normalizedPath": "/api/courses/{param1}/import-unit",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses/{course_id}/import-unit"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 373,
+      "callee": "fetch",
+      "method": "PUT",
+      "rawPath": "/api/courses/${courseId}/units/${unitId}",
+      "normalizedPath": "/api/courses/{param1}/units/{param2}",
+      "matches": [
+        {
+          "method": "PUT",
+          "path": "/api/courses/{course_id}/units/{unit_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 576,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/courses/${courseId}/units/${uId}",
+      "normalizedPath": "/api/courses/{param1}/units/{param2}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/courses/{course_id}/units/{unit_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 657,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/files/${fileId}",
+      "normalizedPath": "/api/files/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/files/{file_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/courses/new/page.tsx",
+      "line": 673,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/image",
+      "normalizedPath": "/api/courses/{param1}/image",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses/{course_id}/image"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/grading-hub/[id]/page.tsx",
+      "line": 55,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/submissions/${submissionId}",
+      "normalizedPath": "/api/submissions/{param1}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/submissions/{submission_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/groups/new/page.tsx",
+      "line": 35,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/groups",
+      "normalizedPath": "/api/groups",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/groups"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/groups/page.tsx",
+      "line": 40,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/groups",
+      "normalizedPath": "/api/groups",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/groups"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/new/page.tsx",
+      "line": 14,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/learning-paths",
+      "normalizedPath": "/api/learning-paths",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/learning-paths"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/page.tsx",
+      "line": 39,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learning-paths",
+      "normalizedPath": "/api/learning-paths",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learning-paths"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/components/AddCourseModal.tsx",
+      "line": 115,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/learning-paths/${pathId}/courses",
+      "normalizedPath": "/api/learning-paths/{param1}/courses",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/learning-paths/{path_id}/courses"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/components/UsersPanel.tsx",
+      "line": 61,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learning-paths/${pathId}/enrollments?${params}",
+      "normalizedPath": "/api/learning-paths/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learning-paths/{path_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/components/UsersPanel.tsx",
+      "line": 79,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/users?${params}",
+      "normalizedPath": "/api/users",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/users"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/components/UsersPanel.tsx",
+      "line": 120,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/learning-paths/${pathId}/enrollments",
+      "normalizedPath": "/api/learning-paths/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/learning-paths/{path_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/components/UsersPanel.tsx",
+      "line": 144,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/learning-paths/${pathId}/enrollments?userId=${encodeURIComponent(userId)}",
+      "normalizedPath": "/api/learning-paths/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/learning-paths/{path_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page-new.tsx",
+      "line": 59,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/learning-paths/${id}",
+      "normalizedPath": "/api/learning-paths/{param1}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/learning-paths/{path_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page-new.tsx",
+      "line": 95,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/learning-paths/${id}",
+      "normalizedPath": "/api/learning-paths/{param1}",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/learning-paths/{path_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page.tsx",
+      "line": 187,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/learning-paths/${id}/sections",
+      "normalizedPath": "/api/learning-paths/{param1}/sections",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/learning-paths/{path_id}/sections"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page.tsx",
+      "line": 297,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/learning-paths/${id}/sections/${sectionId}",
+      "normalizedPath": "/api/learning-paths/{param1}/sections/{param2}",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/learning-paths/{path_id}/sections/{section_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/learning-paths/[id]/edit/page.tsx",
+      "line": 318,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/learning-paths/${id}/sections/${sectionId}",
+      "normalizedPath": "/api/learning-paths/{param1}/sections/{param2}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/learning-paths/{path_id}/sections/{section_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/page.tsx",
+      "line": 98,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/auth/me",
+      "normalizedPath": "/api/auth/me",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/auth/me"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/skills/new/page.tsx",
+      "line": 22,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/skills",
+      "normalizedPath": "/api/skills",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/skills"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/skills/page.tsx",
+      "line": 34,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/skills",
+      "normalizedPath": "/api/skills",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/skills"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/users/new/page.tsx",
+      "line": 162,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/users",
+      "normalizedPath": "/api/users",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/users"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/users/[id]/edit/page.tsx",
+      "line": 109,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/users/${userId}",
+      "normalizedPath": "/api/users/{param1}",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/users/search"
+        },
+        {
+          "method": "GET",
+          "path": "/api/users/{user_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/(super-instructor)/super-instructor/users/[id]/edit/page.tsx",
+      "line": 220,
+      "callee": "fetch",
+      "method": "PUT",
+      "rawPath": "/api/users/${userId}",
+      "normalizedPath": "/api/users/{param1}",
+      "matches": [
+        {
+          "method": "PUT",
+          "path": "/api/users/{user_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/automations/page.tsx",
+      "line": 123,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/automations",
+      "normalizedPath": "/api/automations",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/automations"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/automations/page.tsx",
+      "line": 147,
+      "callee": "apiFetch",
+      "method": "PATCH",
+      "rawPath": "/api/automations",
+      "normalizedPath": "/api/automations",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/automations"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/automations/page.tsx",
+      "line": 163,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/automations",
+      "normalizedPath": "/api/automations",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/automations"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/branches/page.tsx",
+      "line": 123,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/branches/${branch.id}",
+      "normalizedPath": "/api/branches/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/branches/{branch_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/learning-paths/page.tsx",
+      "line": 164,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/learning-paths/${selectedPath.id}",
+      "normalizedPath": "/api/learning-paths/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/learning-paths/{path_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/learning-paths/[id]/edit/components/LearningPathOptionsPanel.tsx",
+      "line": 85,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/learning-paths/${pathId}/options",
+      "normalizedPath": "/api/admin/learning-paths/{param1}/options",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/learning-paths/{path_id}/options"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/learning-paths/[id]/edit/page.tsx",
+      "line": 177,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/learning-paths/${id}/courses/reorder",
+      "normalizedPath": "/api/learning-paths/{param1}/courses/reorder",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/learning-paths/{path_id}/courses/reorder"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/components/NotificationDrawer.tsx",
+      "line": 83,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/branches",
+      "normalizedPath": "/api/branches",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/branches"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/components/NotificationDrawer.tsx",
+      "line": 188,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/admin/notifications/${notification.id}/preview",
+      "normalizedPath": "/api/admin/notifications/{param1}/preview",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/admin/notifications/{notification_id}/preview"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/page.tsx",
+      "line": 100,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/notifications?tab=${tabMap[currentTab]}&search=${searchQuery}",
+      "normalizedPath": "/api/admin/notifications",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/notifications"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/page.tsx",
+      "line": 140,
+      "callee": "fetch",
+      "method": "PATCH",
+      "rawPath": "/api/admin/notifications/${notification.id}/toggle",
+      "normalizedPath": "/api/admin/notifications/{param1}/toggle",
+      "matches": [
+        {
+          "method": "PATCH",
+          "path": "/api/admin/notifications/{notification_id}/toggle"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/page.tsx",
+      "line": 153,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/admin/notifications/${notification.id}/duplicate",
+      "normalizedPath": "/api/admin/notifications/{param1}/duplicate",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/admin/notifications/{notification_id}/duplicate"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/notifications/page.tsx",
+      "line": 174,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/admin/notifications/${notificationToDelete}",
+      "normalizedPath": "/api/admin/notifications/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/admin/notifications/{notification_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/reports/page.tsx",
+      "line": 39,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/reports/export/training-progress",
+      "normalizedPath": "/api/reports/export/training-progress",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/reports/export/training-progress"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/security/audit/page.tsx",
+      "line": 65,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/security/audit?${params.toString()}",
+      "normalizedPath": "/api/admin/security/audit",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/security/audit"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/security/sessions/page.tsx",
+      "line": 52,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/security/sessions",
+      "normalizedPath": "/api/admin/security/sessions",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/security/sessions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/security/sessions/page.tsx",
+      "line": 67,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/admin/security/sessions?id=${sessionId}",
+      "normalizedPath": "/api/admin/security/sessions",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/admin/security/sessions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/users/new/page.tsx",
+      "line": 116,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/roles",
+      "normalizedPath": "/api/admin/roles",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/roles"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/users/new/page.tsx",
+      "line": 151,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/permissions",
+      "normalizedPath": "/api/admin/permissions",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/permissions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/users/new/page.tsx",
+      "line": 176,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/admin/users/preview-permissions?${params.toString()}",
+      "normalizedPath": "/api/admin/users/preview-permissions",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users/preview-permissions"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/admin/users/page.tsx",
+      "line": 273,
+      "callee": "apiFetch",
+      "method": "DELETE",
+      "rawPath": "/api/users/${currentUser.id}",
+      "normalizedPath": "/api/users/{param1}",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/users/{user_id}"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/forgot-password/page.tsx",
+      "line": 19,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/auth/forgot-password",
+      "normalizedPath": "/api/auth/forgot-password",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/auth/forgot-password"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/app/signup/page.tsx",
+      "line": 76,
+      "callee": "apiFetch",
+      "method": "POST",
+      "rawPath": "/api/auth/signup",
+      "normalizedPath": "/api/auth/signup",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/auth/signup"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/assignments/ui/AssignmentForm.tsx",
+      "line": 193,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/upload",
+      "normalizedPath": "/api/upload",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/upload"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/assignments/ui/AssignmentForm.tsx",
+      "line": 125,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/courses/${courseId}/enrollments",
+      "normalizedPath": "/api/courses/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses/{course_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/courses/editor/CourseEnrollmentDrawer.tsx",
+      "line": 117,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/courses/${courseId}/enrollment-requests",
+      "normalizedPath": "/api/courses/{param1}/enrollment-requests",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/courses/{course_id}/enrollment-requests"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/courses/editor/CourseEnrollmentDrawer.tsx",
+      "line": 236,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/courses/${courseId}/enrollments",
+      "normalizedPath": "/api/courses/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/courses/{course_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/courses/editor/CourseEnrollmentDrawer.tsx",
+      "line": 266,
+      "callee": "fetch",
+      "method": "DELETE",
+      "rawPath": "/api/courses/${courseId}/enrollments?enrollmentId=${enrollmentId}",
+      "normalizedPath": "/api/courses/{param1}/enrollments",
+      "matches": [
+        {
+          "method": "DELETE",
+          "path": "/api/courses/{course_id}/enrollments"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/reports/ui/OverviewTab.tsx",
+      "line": 119,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/reports/overview?period=${period}",
+      "normalizedPath": "/api/reports/overview",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/reports/overview"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/reports/ui/TrainingMatrixTab.tsx",
+      "line": 76,
+      "callee": "fetch",
+      "method": "POST",
+      "rawPath": "/api/reports/export/training-matrix",
+      "normalizedPath": "/api/reports/export/training-matrix",
+      "matches": [
+        {
+          "method": "POST",
+          "path": "/api/reports/export/training-matrix"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/modules/reports/ui/TrainingMatrixTab.tsx",
+      "line": 60,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/reports/training-matrix?${params}",
+      "normalizedPath": "/api/reports/training-matrix",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/reports/training-matrix"
+        }
+      ]
+    },
+    {
+      "file": "apps/web/src/shared/hooks/usePermissions.ts",
+      "line": 60,
+      "callee": "fetch",
+      "method": "GET",
+      "rawPath": "/api/auth/permissions",
+      "normalizedPath": "/api/auth/permissions",
+      "matches": [
+        {
+          "method": "GET",
+          "path": "/api/auth/permissions"
+        }
+      ]
+    }
+  ],
+  "unusedBackend": [
+    {
+      "method": "GET",
+      "path": "/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout-all"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/switch-node"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/reset-password"
+    },
+    {
+      "method": "POST",
+      "path": "/api/me/switch-role"
+    },
+    {
+      "method": "GET",
+      "path": "/api/courses/{course_id}/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/courses/{course_id}/sections"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/courses/{course_id}/sections/{section_id}"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/courses/{course_id}/sections/{section_id}"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/users"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/users"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/courses"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/courses"
+    },
+    {
+      "method": "GET",
+      "path": "/api/enrollments"
+    },
+    {
+      "method": "POST",
+      "path": "/api/enrollments"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/enrollments/{enrollment_id}"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/groups"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/{group_id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/groups/{group_id}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/{group_id}/members"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/{group_id}/courses"
+    },
+    {
+      "method": "GET",
+      "path": "/api/categories"
+    },
+    {
+      "method": "POST",
+      "path": "/api/categories"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/categories/{category_id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/categories/{category_id}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/branches"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/branches"
+    },
+    {
+      "method": "GET",
+      "path": "/api/branches/{branch_id}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/branches/{branch_id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/branches/{branch_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/certificates"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/learning-paths/{path_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/learning-paths/{path_id}/courses"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/learning-paths/{path_id}/courses/{course_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/learning-paths/{path_id}/sections"
+    },
+    {
+      "method": "POST",
+      "path": "/api/assignments"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/assignments/{assignment_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/notifications"
+    },
+    {
+      "method": "POST",
+      "path": "/api/notifications/mark-read"
+    },
+    {
+      "method": "POST",
+      "path": "/api/notifications/mark-all-read"
+    },
+    {
+      "method": "GET",
+      "path": "/api/notifications/{notification_id}"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/notifications/{notification_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/reports/dashboard"
+    },
+    {
+      "method": "GET",
+      "path": "/api/reports/course-progress"
+    },
+    {
+      "method": "POST",
+      "path": "/api/reports/generate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/reports/user-activity"
+    },
+    {
+      "method": "GET",
+      "path": "/api/dashboard"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/settings"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/settings"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users/export"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/user-types"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/import"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/{user_id}/impersonate"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/notifications"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/notifications/{notification_id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/notifications/{notification_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/notifications/events"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/notifications/pending/{queue_id}/cancel"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/learning-paths/{path_id}/options"
+    },
+    {
+      "method": "POST",
+      "path": "/api/instructor/groups"
+    },
+    {
+      "method": "POST",
+      "path": "/api/instructor/calendar/events"
+    },
+    {
+      "method": "POST",
+      "path": "/api/instructor/conferences"
+    },
+    {
+      "method": "POST",
+      "path": "/api/learner/progress/units/{unitId}/complete"
+    },
+    {
+      "method": "GET",
+      "path": "/api/automations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/files/{file_id}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/submissions"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/submissions/{submission_id}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/{path}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/{path}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/{path}"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/{path}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/{path}"
+    }
+  ]
+}

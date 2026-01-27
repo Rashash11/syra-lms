@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-01-20T03:49:12.072722",
+  "exit_code": 0,
+  "results": [
+    {
+      "name": "Infra Health Check",
+      "status": "PASS",
+      "duration": 0.27372193336486816,
+      "error": null
+    },
+    {
+      "name": "Authentication (Login)",
+      "status": "PASS",
+      "duration": 0.06459927558898926,
+      "error": null
+    },
+    {
+      "name": "Get Current User (Me)",
+      "status": "PASS",
+      "duration": 0.009815216064453125,
+      "error": null
+    },
+    {
+      "name": "List Users",
+      "status": "PASS",
+      "duration": 0.01609969139099121,
+      "error": null
+    },
+    {
+      "name": "Courses CRUD",
+      "status": "PASS",
+      "duration": 0.08503842353820801,
+      "error": null
+    },
+    {
+      "name": "Admin Reports",
+      "status": "PASS",
+      "duration": 0.0037364959716796875,
+      "error": null
+    }
+  ]
+}
