@@ -1,0 +1,520 @@
+# 🚀 SYRA LMS - Complete Setup Guide
+
+**A step-by-step guide to get the LMS running perfectly on your machine.**
+
+---
+
+## 📋 Prerequisites
+
+Before starting, ensure you have these installed:
+
+- **Node.js** v20.0.0 or higher ([Download](https://nodejs.org/))
+- **Python** 3.11 or higher ([Download](https://www.python.org/downloads/))
+- **Docker Desktop** ([Download](https://www.docker.com/products/docker-desktop/))
+- **Git** ([Download](https://git-scm.com/downloads))
+
+**Verify installations:**
+```bash
+node --version    # Should show v20.x.x or higher
+python --version  # Should show 3.11.x or higher
+docker --version  # Should show Docker version
+git --version     # Should show git version
+```
+
+---
+
+## 📥 Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Rashash11/syra-lms.git
+cd syra-lms
+```
+
+---
+
+## 🔧 Step 2: Environment Setup
+
+### 2.1 Copy Environment Files
+
+```bash
+# Copy main environment file
+copy .env.example .env
+
+# Copy backend environment file
+copy services\api\.env.example services\api\.env
+```
+
+### 2.2 Configure Environment Variables
+
+Open `.env` and verify these settings:
+
+```env
+# Database
+DATABASE_URL="postgresql://lms_user:lms_password@localhost:5433/lms_db"
+
+# Backend API
+PYTHON_BACKEND_URL="http://localhost:8000"
+
+# JWT Secret (change in production!)
+JWT_SECRET="your-secret-key-change-in-production"
+
+# Node Environment
+NODE_ENV="development"
+```
+
+**Note:** Default values should work fine for local development.
+
+---
+
+## 🐳 Step 3: Start Database Services
+
+Start PostgreSQL and Redis using Docker:
+
+```bash
+docker-compose -f docker-compose.db.yml up -d
+```
+
+**Verify services are running:**
+```bash
+docker ps
+```
+
+You should see:
+- `lms_postgres` (PostgreSQL on port 5433)
+- `lms_redis` (Redis on port 6379)
+
+**Wait 10 seconds** for databases to fully initialize.
+
+---
+
+## 📦 Step 4: Install Dependencies
+
+### 4.1 Install Node.js Dependencies
+
+```bash
+npm install
+```
+
+This installs all frontend and shared dependencies.
+
+### 4.2 Install Python Dependencies
+
+```bash
+cd services\api
+pip install -r requirements.txt
+cd ..\..
+```
+
+**Note:** If you get permission errors, use `pip install --user -r requirements.txt`
+
+---
+
+## 🗄️ Step 5: Setup Database
+
+### 5.1 Generate Prisma Client
+
+```bash
+npm run db:generate
+```
+
+### 5.2 Push Database Schema
+
+```bash
+npm run db:push
+```
+
+This creates all database tables.
+
+### 5.3 Seed Database with Sample Data
+
+```bash
+npm run db:seed
+```
+
+This creates:
+- **26 users** (3 admins, 3 super instructors, 3 instructors, 17 learners)
+- **5 sample courses** with content
+- **2 learning paths**
+- **68 enrollments** with progress
+- **2 tenants** for multi-tenant testing
+
+**Expected output:**
+```
+✅ Created admin user: admin@portal.com / Admin123!
+✅ Created super instructor user: superinstructor@portal.com / Super123!
+✅ Created instructor user: instructor@portal.com / Instructor123!
+✅ Created 17 learner users
+✅ Created 5 sample courses
+✅ Database seeded successfully!
+```
+
+---
+
+## 🚀 Step 6: Start the Application
+
+### Option A: Start All Services Together (Recommended)
+
+Open **3 separate terminal windows** and run:
+
+**Terminal 1 - Backend API:**
+```bash
+cd services\api
+python -m uvicorn app.main:app --reload --port 8000
+```
+
+**Terminal 2 - Frontend:**
+```bash
+npm run dev
+```
+
+**Terminal 3 - Background Jobs (Optional):**
+```bash
+# Only needed if using background jobs
+npm run start:workers
+```
+
+### Option B: Use Concurrently (Alternative)
+
+```bash
+npm run start:all
+```
+
+**Wait for all services to start** (about 30 seconds).
+
+---
+
+## ✅ Step 7: Verify Everything is Running
+
+### 7.1 Check Services
+
+Open your browser and verify:
+
+1. **Frontend:** http://localhost:3000
+   - Should show login page
+
+2. **Backend API:** http://localhost:8000/docs
+   - Should show FastAPI documentation
+
+3. **Database:** 
+   ```bash
+   docker exec -it lms_postgres psql -U lms_user -d lms_db -c "SELECT COUNT(*) FROM users;"
+   ```
+   - Should show 26 users
+
+### 7.2 Test Login
+
+Go to http://localhost:3000 and login with:
+
+**Admin:**
+```
+Email: admin@portal.com
+Password: Admin123!
+```
+
+**Instructor:**
+```
+Email: instructor@portal.com
+Password: Instructor123!
+```
+
+**Learner:**
+```
+Email: learner1@portal.com
+Password: Learner123!
+```
+
+**✅ If you can login and see the dashboard, everything is working!**
+
+---
+
+## 🧪 Step 8: Run Tests (Optional)
+
+### 8.1 Generate E2E Auth States
+
+```bash
+npm run test:auth-states
+```
+
+### 8.2 Run Unit Tests
+
+```bash
+npm run test:unit
+```
+
+### 8.3 Run Integration Tests
+
+```bash
+npm run test:integration
+```
+
+### 8.4 Run E2E Tests
+
+```bash
+npm run test:e2e:fast
+```
+
+**Expected:** 83+ tests passing
+
+---
+
+## 📚 Step 9: Explore the System
+
+### Admin Dashboard
+- **URL:** http://localhost:3000/admin
+- **Features:** User management, course creation, reports, settings
+
+### Instructor Dashboard
+- **URL:** http://localhost:3000/instructor
+- **Features:** Course editing, student tracking, grading
+
+### Learner Dashboard
+- **URL:** http://localhost:3000/learner
+- **Features:** Course enrollment, learning paths, assignments
+
+---
+
+## 🔑 Default Login Credentials
+
+### Admin Accounts
+```
+admin@portal.com / Admin123!
+admin-a@test.local / TestPass123!
+admin-b@test.local / TestPass123!
+```
+
+### Super Instructor Accounts
+```
+superinstructor@portal.com / Super123!
+super-instructor-a@test.local / TestPass123!
+```
+
+### Instructor Accounts
+```
+instructor@portal.com / Instructor123!
+instructor-a@test.local / TestPass123!
+instructor-b@test.local / TestPass123!
+```
+
+### Learner Accounts
+```
+learner1@portal.com / Learner123!
+learner2@portal.com / Learner123!
+learner3@portal.com / Learner123!
+learner-a@test.local / TestPass123!
+learner-b@test.local / TestPass123!
+```
+
+**Plus 12 more learner accounts** (all password: `Learner123!`):
+- hana.mahmoud@portal.com
+- ali.hassan@portal.com
+- mariam.elsayed@portal.com
+- kareem.farouk@portal.com
+- nour.said@portal.com
+- youssef.ahmed@portal.com
+- layla.mostafa@portal.com
+- omar.khaled@portal.com
+- fatima.omar@portal.com
+- mohamed.ibrahim@portal.com
+- sara.ali@portal.com
+- ahmed.hassan@portal.com
+
+---
+
+## 🛠️ Troubleshooting
+
+### Issue: "Port already in use"
+
+**Solution:**
+```bash
+# Find and kill process on port 3000
+netstat -ano | findstr :3000
+taskkill /PID <PID> /F
+
+# Find and kill process on port 8000
+netstat -ano | findstr :8000
+taskkill /PID <PID> /F
+```
+
+### Issue: "Database connection failed"
+
+**Solution:**
+```bash
+# Restart Docker containers
+docker-compose -f docker-compose.db.yml down
+docker-compose -f docker-compose.db.yml up -d
+
+# Wait 10 seconds, then retry
+```
+
+### Issue: "Module not found" errors
+
+**Solution:**
+```bash
+# Reinstall dependencies
+rm -rf node_modules package-lock.json
+npm install
+
+# Regenerate Prisma client
+npm run db:generate
+```
+
+### Issue: "401 Unauthorized" errors after login
+
+**Solution:**
+1. Clear browser cookies (F12 → Application → Cookies → Delete All)
+2. Close browser completely
+3. Reopen and login again
+
+### Issue: Python dependencies fail to install
+
+**Solution:**
+```bash
+# Use Python virtual environment
+cd services\api
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Issue: Docker containers won't start
+
+**Solution:**
+1. Make sure Docker Desktop is running
+2. Check if ports 5433 and 6379 are available
+3. Restart Docker Desktop
+4. Try again
+
+---
+
+## 🔄 Resetting the Database
+
+If you need to start fresh:
+
+```bash
+# Stop all services
+# Ctrl+C in all terminal windows
+
+# Reset database
+npm run db:seed
+
+# Restart services
+# Follow Step 6 again
+```
+
+---
+
+## 📖 Useful Commands
+
+### Development
+```bash
+npm run dev              # Start frontend dev server
+npm run build            # Build for production
+npm run start            # Start production server
+npm run lint             # Run linter
+npm run typecheck        # Check TypeScript types
+```
+
+### Database
+```bash
+npm run db:generate      # Generate Prisma client
+npm run db:push          # Push schema to database
+npm run db:seed          # Seed database with sample data
+npm run db:studio        # Open Prisma Studio (database GUI)
+```
+
+### Testing
+```bash
+npm run test:unit        # Run unit tests
+npm run test:integration # Run integration tests
+npm run test:e2e:fast    # Run fast E2E tests
+npm run test:e2e:full    # Run full E2E test suite
+npm run test:auth-states # Generate E2E auth states
+```
+
+### Backend
+```bash
+cd services\api
+python -m uvicorn app.main:app --reload --port 8000  # Start backend
+python -m pytest                                      # Run Python tests
+```
+
+---
+
+## 🎯 Next Steps
+
+1. **Explore the codebase:**
+   - Frontend: `apps/web/src/`
+   - Backend: `services/api/app/`
+   - Database schema: `packages/db/prisma/schema.prisma`
+
+2. **Read documentation:**
+   - `SYSTEM_OVERVIEW.md` - System architecture
+   - `DATABASE_AND_API_ANALYSIS.md` - Database structure
+   - `AUTHENTICATION_FIX_SUMMARY.md` - Authentication details
+
+3. **Start developing:**
+   - Create new features
+   - Add tests
+   - Customize for your needs
+
+---
+
+## 📞 Getting Help
+
+If you encounter issues:
+
+1. **Check logs:**
+   - Frontend: Terminal where `npm run dev` is running
+   - Backend: Terminal where `uvicorn` is running
+   - Database: `docker logs lms_postgres`
+
+2. **Run verification tests:**
+   ```bash
+   node test-all-roles.js
+   ```
+
+3. **Check documentation:**
+   - All `.md` files in the root directory
+   - API docs: http://localhost:8000/docs
+
+4. **Common issues:**
+   - Clear browser cookies if getting 401 errors
+   - Restart Docker if database connection fails
+   - Reinstall dependencies if module errors occur
+
+---
+
+## ✅ Success Checklist
+
+- [ ] All prerequisites installed
+- [ ] Repository cloned
+- [ ] Environment files configured
+- [ ] Docker containers running
+- [ ] Dependencies installed
+- [ ] Database schema pushed
+- [ ] Database seeded
+- [ ] Frontend running on port 3000
+- [ ] Backend running on port 8000
+- [ ] Can login as admin
+- [ ] Can login as instructor
+- [ ] Can login as learner
+- [ ] Dashboard loads without errors
+- [ ] No 401 errors in console
+
+**If all checked, you're ready to go!** 🎉
+
+---
+
+## 🎉 Congratulations!
+
+Your SYRA LMS is now fully set up and running!
+
+**What you have:**
+- ✅ Complete LMS with 26 users
+- ✅ 5 sample courses with content
+- ✅ Multi-tenant support
+- ✅ Role-based access control
+- ✅ All features working
+- ✅ Ready for development or production
+
+**Happy coding!** 🚀

@@ -1,0 +1,104 @@
+// Simulate exactly what the browser does
+const fetch = require('node-fetch');
+
+async function debugBrowserIssue() {
+    console.log('═══════════════════════════════════════════════════════');
+    console.log('  DEBUGGING BROWSER ISSUE');
+    console.log('═══════════════════════════════════════════════════════\n');
+
+    try {
+        // Step 1: Login
+        console.log('Step 1: Login as admin...');
+        const loginRes = await fetch('http://localhost:3000/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: 'admin@portal.com',
+                password: 'admin123'
+            })
+        });
+
+        const loginData = await loginRes.json();
+        const cookies = loginRes.headers.raw()['set-cookie'];
+        
+        console.log('Login response:', loginData);
+        console.log('Cookies:', cookies ? cookies.length : 0);
+
+        if (!cookies) {
+            console.error('❌ No cookies received!');
+            return;
+        }
+
+        // Step 2: Test the exact URL the frontend uses
+        console.log('\nStep 2: Testing exact frontend URL...');
+        const url = 'http://localhost:3000/api/users?page=1&limit=10&search=&sort_by=createdAt&order=desc';
+        console.log('URL:', url);
+        
+        const usersRes = await fetch(url, {
+            headers: {
+                'Cookie': cookies.join('; '),
+                'Accept': 'application/json',
+                'Cache-Control': 'no-store'
+            }
+        });
+
+        console.log('Status:', usersRes.status);
+        console.log('Headers:', JSON.stringify(usersRes.headers.raw(), null, 2));
+
+        if (usersRes.status !== 200) {
+            const errorText = await usersRes.text();
+            console.error('❌ Error response:', errorText);
+            return;
+        }
+
+        const data = await usersRes.json();
+        console.log('\nResponse structure:');
+        console.log('- Keys:', Object.keys(data));
+        console.log('- data.users:', data.users ? `Array(${data.users.length})` : 'undefined');
+        console.log('- data.data:', data.data ? `Array(${data.data.length})` : 'undefined');
+        console.log('- data.total:', data.total);
+
+        const users = data.data || data.users || [];
+        console.log('\nUsers array:', users.length);
+
+        if (users.length > 0) {
+            console.log('\nFirst user:');
+            console.log(JSON.stringify(users[0], null, 2));
+        } else {
+            console.log('\n❌ NO USERS IN RESPONSE!');
+            console.log('Full response:', JSON.stringify(data, null, 2));
+        }
+
+        // Step 3: Test without query params
+        console.log('\n\nStep 3: Testing without query params...');
+        const simpleRes = await fetch('http://localhost:3000/api/users', {
+            headers: {
+                'Cookie': cookies.join('; '),
+                'Accept': 'application/json'
+            }
+        });
+
+        console.log('Status:', simpleRes.status);
+        const simpleData = await simpleRes.json();
+        const simpleUsers = simpleData.data || simpleData.users || [];
+        console.log('Users:', simpleUsers.length);
+
+        // Step 4: Test the /api/me endpoint
+        console.log('\n\nStep 4: Testing /api/me endpoint...');
+        const meRes = await fetch('http://localhost:3000/api/me', {
+            headers: {
+                'Cookie': cookies.join('; ')
+            }
+        });
+        const meData = await meRes.json();
+        console.log('Current user:', meData.user ? meData.user.email : 'Not found');
+        console.log('User role:', meData.user ? meData.user.activeRole : 'N/A');
+        console.log('User nodeId:', meData.user ? meData.user.nodeId : 'N/A');
+
+    } catch (error) {
+        console.error('❌ Error:', error.message);
+        console.error(error.stack);
+    }
+}
+
+debugBrowserIssue();

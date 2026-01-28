@@ -141,8 +141,16 @@ export default function UsersPage() {
                 credentials: 'include',
                 cache: 'no-store'
             });
+            
+            console.log('[Users Page] Response status:', response.status);
+            
             const data = await response.json();
+            console.log('[Users Page] API Response:', data);
+            console.log('[Users Page] data.users:', data.users);
+            console.log('[Users Page] data.data:', data.data);
+            
             const rawUsers = data.data || data.users || [];
+            console.log('[Users Page] rawUsers length:', rawUsers.length);
 
             // Map snake_case to camelCase if needed
             const mappedUsers = rawUsers.map((u: any) => ({
@@ -154,8 +162,13 @@ export default function UsersPage() {
                 activeRole: u.activeRole || u.active_role || u.role, // Fallback to role if active_role missing
             }));
 
+            console.log('[Users Page] mappedUsers length:', mappedUsers.length);
+            console.log('[Users Page] Setting users state with:', mappedUsers);
+            
             setUsers(mappedUsers);
             setTotalUsers(data.total || 0);
+            
+            console.log('[Users Page] State updated. Total:', data.total || 0);
         } catch (error) {
             console.error('Failed to fetch users:', error);
         } finally {
@@ -315,6 +328,11 @@ export default function UsersPage() {
 
     // Use server-side sorting only
     const filteredUsers = users;
+    
+    console.log('[Users Page] Render - users.length:', users.length);
+    console.log('[Users Page] Render - filteredUsers.length:', filteredUsers.length);
+    console.log('[Users Page] Render - loading:', loading);
+    console.log('[Users Page] Render - totalUsers:', totalUsers);
 
     return (
         <Box sx={{ p: 3, animation: 'fadeIn 0.5s ease-out' }}>

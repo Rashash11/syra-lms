@@ -2,24 +2,14 @@
   "cookies": [
     {
       "name": "session",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMTQ3OGRhYS1mZmM5LTQ0YTQtYTI2YS0zOWExODNlMjZkODQiLCJlbWFpbCI6ImFkbWluLWFAdGVzdC5sb2NhbCIsInJvbGUiOiJBRE1JTiIsImFjdGl2ZVJvbGUiOiJBRE1JTiIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzY5NDgwNDQ0LCJleHAiOjE3Njk0ODEzNDQsImlzcyI6Imxtcy1hdXRoIiwiYXVkIjoibG1zLWFwaSIsInRlbmFudElkIjoiODMyYjdjYWQtNGVmOS00NWUxLTgwOGYtMGVmODAyMWQ3MzBhIiwibm9kZUlkIjoiZDMxYWQ1NTgtNmYyOC00ODY5LTg0ZDktNzRhOWZjN2ZlNjY4In0.0rLAYU6PIetDQHPoftuA8l5T3DbuP1aNAZ7YODFR6uI",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMjE5OWQ3NC1kNjU0LTQ2NDYtYTA1MC1lYzgwNDM4MmFkZjgiLCJlbWFpbCI6ImFkbWluLWFAdGVzdC5sb2NhbCIsInJvbGUiOiJBRE1JTiIsImFjdGl2ZVJvbGUiOiJBRE1JTiIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzY5NTU5NTMzLCJleHAiOjE3Njk1NjA0MzMsImlzcyI6Imxtcy1hdXRoIiwiYXVkIjoibG1zLWFwaSIsInRlbmFudElkIjoiNjIxNDM0ODctMzI3YS00MjgwLTk2YTQtZjIxOTExYWNhZTk1Iiwibm9kZUlkIjoiNWUzZDFlMWEtZDM2Ny00MDQ3LWI4NDItOTVlM2E0MjdkZmE0In0.13OyqcmgW84pcWxvW-rFIS7tQKSGkZ6pKQOlDdw8Uxg",
       "domain": "localhost",
       "path": "/",
-      "expires": 1769481344.662215,
       "httpOnly": true,
       "secure": false,
-      "sameSite": "Lax"
+      "sameSite": "Lax",
+      "expires": 1769560433.05
     }
   ],
-  "origins": [
-    {
-      "origin": "http://localhost:3001",
-      "localStorage": [
-        {
-          "name": "lms.permissions.cache.v2",
-          "value": "{\"permissions\":[\"assignment:create\",\"assignment:read\",\"course:update\",\"certificate:template:read\",\"group:delete\",\"groups:read\",\"certificate:issue:read\",\"profile:read\",\"user:update\",\"submission:update\",\"learning_path:read\",\"unit:update\",\"unit:publish\",\"submission:publish\",\"groups:create\",\"branches:update\",\"categories:update\",\"assignment:delete\",\"notifications:read\",\"automations:read\",\"notifications:update\",\"calendar:read\",\"reports:export\",\"assignment:assign\",\"certificate:view_own\",\"unit:delete\",\"user:delete\",\"automations:update\",\"unit:read\",\"conference:delete\",\"conference:read\",\"automations:create\",\"submission:download\",\"user:create\",\"enrollments:create\",\"conference:update\",\"group:read\",\"security:sessions:revoke\",\"categories:delete\",\"enrollments:read\",\"reports:update\",\"certificate:template:delete\",\"course:delete_any\",\"user:read\",\"group:update\",\"skills:read\",\"branches:create\",\"reports:read\",\"calendar:delete\",\"skills:delete\",\"notifications:create\",\"security:sessions:read\",\"calendar:create\",\"learning_path:create\",\"branches:delete\",\"reports:create\",\"conference:create\",\"certificate:template:create\",\"notifications:delete\",\"course:read\",\"security:audit:read\",\"groups:delete\",\"groups:update\",\"assignment:update\",\"calendar:update\",\"skills:update\",\"course:delete\",\"categories:read\",\"course:publish\",\"profile:update\",\"categories:create\",\"submission:read\",\"submission:create\",\"group:create\",\"automations:delete\",\"submission:grade\",\"certificate:template:update\",\"unit:create\",\"submission:delete\",\"branches:read\",\"skills:create\",\"course:create\",\"learning_path:delete\",\"course:update_any\",\"reports:delete\",\"learning_path:update\",\"unit:update_any\"],\"lastFetched\":1769480445201}"
-        }
-      ]
-    }
-  ]
+  "origins": []
 }

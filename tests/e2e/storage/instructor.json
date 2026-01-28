@@ -2,24 +2,14 @@
   "cookies": [
     {
       "name": "session",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxNGFlOTU0Zi1mYTI1LTQ0ZGUtYTQ0Yi1iYTc3NWE1OWVmZTIiLCJlbWFpbCI6Imluc3RydWN0b3ItYUB0ZXN0LmxvY2FsIiwicm9sZSI6IklOU1RSVUNUT1IiLCJhY3RpdmVSb2xlIjoiSU5TVFJVQ1RPUiIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzY5NDgxMDI1LCJleHAiOjE3Njk0ODE5MjUsImlzcyI6Imxtcy1hdXRoIiwiYXVkIjoibG1zLWFwaSIsInRlbmFudElkIjoiODMyYjdjYWQtNGVmOS00NWUxLTgwOGYtMGVmODAyMWQ3MzBhIiwibm9kZUlkIjoiZDMxYWQ1NTgtNmYyOC00ODY5LTg0ZDktNzRhOWZjN2ZlNjY4In0.aRmo5aNtuT_OWYUv8RDf3YH7yzf3n6X8PJmPNQflBE0",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMzA2NzNlYi01ZDE5LTQ0YTEtOTkxNi0zNzM5OTQ3MTU3MDAiLCJlbWFpbCI6Imluc3RydWN0b3ItYUB0ZXN0LmxvY2FsIiwicm9sZSI6IklOU1RSVUNUT1IiLCJhY3RpdmVSb2xlIjoiSU5TVFJVQ1RPUiIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzY5NTU5NTMzLCJleHAiOjE3Njk1NjA0MzMsImlzcyI6Imxtcy1hdXRoIiwiYXVkIjoibG1zLWFwaSIsInRlbmFudElkIjoiNjIxNDM0ODctMzI3YS00MjgwLTk2YTQtZjIxOTExYWNhZTk1Iiwibm9kZUlkIjoiNWUzZDFlMWEtZDM2Ny00MDQ3LWI4NDItOTVlM2E0MjdkZmE0In0.3cLXoX9OsDk9wj5PeTpXZw6NGR0o0Kze28ooKUSuK8c",
       "domain": "localhost",
       "path": "/",
-      "expires": 1769481925.118677,
       "httpOnly": true,
       "secure": false,
-      "sameSite": "Lax"
+      "sameSite": "Lax",
+      "expires": 1769560433.547
     }
   ],
-  "origins": [
-    {
-      "origin": "http://localhost:3001",
-      "localStorage": [
-        {
-          "name": "lms.permissions.cache.v2",
-          "value": "{\"permissions\":[\"course:publish\",\"reports:export\",\"profile:update\",\"calendar:create\",\"assignment:create\",\"assignment:read\",\"course:update\",\"assignment:assign\",\"certificate:view_own\",\"unit:delete\",\"certificate:template:read\",\"submission:read\",\"learning_path:create\",\"unit:read\",\"enrollments:update\",\"group:delete\",\"conference:delete\",\"conference:read\",\"groups:read\",\"submission:download\",\"certificate:issue:read\",\"submission:create\",\"enrollments:create\",\"profile:read\",\"conference:update\",\"group:read\",\"enrollments:read\",\"conference:create\",\"group:create\",\"learning_path:read\",\"course:read\",\"unit:update\",\"submission:grade\",\"unit:create\",\"groups:update\",\"unit:publish\",\"assignment:update\",\"submission:publish\",\"groups:create\",\"user:read\",\"group:update\",\"calendar:update\",\"skills:read\",\"branches:read\",\"course:create\",\"reports:read\",\"calendar:delete\",\"course:delete\",\"assignment:delete\",\"categories:read\",\"learning_path:update\",\"calendar:read\"],\"lastFetched\":1769481025548}"
-        }
-      ]
-    }
-  ]
+  "origins": []
 }
