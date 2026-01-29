@@ -29,3 +29,37 @@ export async function signAccessToken(payload: Record<string, any>) {
     return token;
 }
 
+export async function signRefreshToken(payload: Record<string, any>) {
+    const finalPayload = {
+        ...payload,
+        type: 'refresh'
+    };
+    const token = await new SignJWT(finalPayload)
+        .setProtectedHeader({ alg: 'HS256' })
+        .setIssuedAt()
+        .setExpirationTime('7d') // Refresh tokens last 7 days
+        .setIssuer(ISSUER)
+        .setAudience(AUDIENCE)
+        .sign(JWT_SECRET);
+    return token;
+}
+
+export async function verifyRefreshToken(token: string) {
+    try {
+        const { payload } = await jwtVerify(token, JWT_SECRET, {
+            issuer: ISSUER,
+            audience: AUDIENCE,
+        });
+        
+        // Verify it's a refresh token
+        if (payload.type !== 'refresh') {
+            throw new Error('Invalid token type');
+        }
+        
+        return payload as any;
+    } catch (e) {
+        throw new Error('Invalid or expired refresh token');
+    }
+}
+
+
